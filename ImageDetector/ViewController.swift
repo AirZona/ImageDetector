@@ -25,6 +25,11 @@ class ViewController: UIViewController {
         modelSetup()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        previewLayer.frame = self.videoView.bounds;
+    }
+    
     func setupVideoSession() {
         guard let video = AVCaptureDevice.default(for: .video), let videoInput = try? AVCaptureDeviceInput(device: video) else {
             fatalError("No video camera available")
@@ -48,11 +53,6 @@ class ViewController: UIViewController {
         connection?.videoOrientation = .portrait
         
         session.startRunning()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        previewLayer.frame = self.videoView.bounds;
     }
     
     func modelSetup() {
@@ -95,7 +95,7 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         // for orientation see kCGImagePropertyOrientation
         let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, orientation: CGImagePropertyOrientation(rawValue: 1)!, options: requestOptions)
         do {
-            try imageRequestHandler.perform(self.visionRequests)
+            try imageRequestHandler.perform(visionRequests)
         } catch {
             print(error)
         }
