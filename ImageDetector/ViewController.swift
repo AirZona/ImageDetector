@@ -48,8 +48,6 @@ class ViewController: UIViewController {
         connection?.videoOrientation = .portrait
         
         session.startRunning()
-        
-        modelSetup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
