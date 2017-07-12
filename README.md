@@ -21,5 +21,5 @@
         ImageDetector for Core ML - Basic Image Classifier
     </h1>
     <br>
-    This app is a basic image classifier using the Resnet50 mlmodel. This app runs on iOS
+    This app is a basic image classifier using the Resnet50 mlmodel. This app runs on iOS 11.
 </p>
