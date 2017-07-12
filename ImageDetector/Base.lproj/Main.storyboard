@@ -21,22 +21,42 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LRd-8y-qUC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.12164392605633803" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifier" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42a-Ys-7n4">
+                                <rect key="frame" x="8" y="28" width="359" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="42a-Ys-7n4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="2mE-F2-T6S"/>
+                            <constraint firstItem="LRd-8y-qUC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4Ko-LA-D8Q"/>
                             <constraint firstItem="fgY-9K-f7H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6NZ-6b-03v"/>
+                            <constraint firstItem="LRd-8y-qUC" firstAttribute="bottom" secondItem="42a-Ys-7n4" secondAttribute="bottom" constant="12" id="9KY-Wo-NlK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="42a-Ys-7n4" secondAttribute="trailing" constant="8" id="BCh-uX-0vb"/>
                             <constraint firstAttribute="bottom" secondItem="fgY-9K-f7H" secondAttribute="bottom" id="Hya-Eg-XJb"/>
                             <constraint firstAttribute="trailing" secondItem="fgY-9K-f7H" secondAttribute="trailing" id="Jjb-CC-80e"/>
+                            <constraint firstAttribute="trailing" secondItem="LRd-8y-qUC" secondAttribute="trailing" id="Sv9-Ja-IZF"/>
                             <constraint firstItem="fgY-9K-f7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aRE-Xg-0j2"/>
+                            <constraint firstItem="LRd-8y-qUC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="beK-Lg-eDo"/>
+                            <constraint firstItem="42a-Ys-7n4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="vg5-Xj-4Uh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="identifierLabel" destination="42a-Ys-7n4" id="GnB-Jd-plb"/>
                         <outlet property="videoView" destination="fgY-9K-f7H" id="q3o-Fe-65V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="108.39580209895054"/>
         </scene>
     </scenes>
 </document>

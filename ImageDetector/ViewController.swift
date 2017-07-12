@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     @IBOutlet weak var videoView: UIView!
- 
+    @IBOutlet weak var identifierLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupVideoSession()
@@ -51,7 +52,6 @@ class ViewController: UIViewController {
         
         previewLayer.frame = self.videoView.bounds;
     }
-    
 }
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
